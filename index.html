@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aye Nyein San | Portfolio</title>
+    <style>
+        :root {
+            --primary: #1A3A5F;
+            --secondary: #4A6B82;
+            --text: #282828;
+            --bg: #f8f9fa;
+            --accent: #eef2f5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text); background-color: var(--bg); line-height: 1.6; padding: 40px 20px; }
+        .container { max-width: 850px; margin: 0 auto; background: white; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-radius: 8px; }
+        
+        /* Header Section with Profile Photo Placeolder */
+        header { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 25px; margin-bottom: 30px; }
+        .header-text h1 { font-size: 28px; color: var(--primary); font-weight: 700; margin-bottom: 5px; }
+        .header-text h2 { font-size: 16px; color: var(--secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
+        .contact-info { font-size: 13px; color: var(--text); display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; }
+        .contact-info a { color: var(--primary); text-decoration: none; }
+        .profile-img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid var(--secondary); }
+
+        /* Section Styling */
+        section { margin-bottom: 35px; }
+        h3 { font-size: 16px; color: var(--primary); letter-spacing: 0.5px; margin-bottom: 15px; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; }
+        
+        .summary { text-align: justify; font-size: 14.5px; }
+        
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .skill-category { display: flex; background: var(--accent); padding: 10px 15px; border-radius: 5px; font-size: 14px; }
+        .skill-category strong { width: 180px; color: var(--primary); flex-shrink: 0; }
+        
+        /* Experience & Education Timeline */
+        .item { margin-bottom: 25px; }
+        .item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px; }
+        .item-title { font-size: 15px; font-weight: 700; color: var(--text); }
+        .item-date { font-size: 13px; font-weight: 600; color: var(--primary); }
+        .item-sub { display: flex; justify-content: space-between; font-size: 13.5px; color: #646E78; margin-bottom: 8px; }
+        
+        ul { list-style-type: none; }
+        li { position: relative; padding-left: 15px; font-size: 14px; margin-bottom: 4px; text-align: justify; }
+        li::before { content: "•"; color: var(--secondary); font-weight: bold; position: absolute; left: 0; }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column-reverse; text-align: center; }
+            .contact-info { grid-template-columns: 1fr; }
+            .skill-category { flex-direction: column; }
+            .skill-category strong { width: 100%; margin-bottom: 3px; }
+            .item-header, .item-sub { flex-direction: column; }
+            .item-date, .item-sub div:last-child { margin-top: 2px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- HEADER -->
+    <header>
+        <div class="header-text">
+            <h1>AYE NYEIN SAN</h1>
+            <h2>Full Stack Developer / Backend Specialist</h2>
+            <div class="contact-info">
+                <div>📍 Pazundaung Township, Yangon, Myanmar</div>
+                <div>📧 <a href="mailto:ayenyeinsan933@gmail.com">ayenyeinsan933@gmail.com</a></div>
+                <div>🔗 <a href="https://github.com/ayenyeinsan226" target="_blank">github.com/ayenyeinsan226</a></div>
+                <div>📞 +95 9 761818170</div>
+            </div>
+        </div>
+        <!-- မိမိဓာတ်ပုံထည့်ရန် (ဖိုင်အမည်ကို profile.jpg ဟု ပြောင်းလဲပေးပါ) -->
+        <img class="profile-img" src="profile.jpg" alt="Aye Nyein San">
+    </header>
+
+    <!-- SUMMARY -->
+    <section>
+        <h3>Professional Summary</h3>
+        <p class="summary">
+            Results-driven and highly adaptable Software Engineer with comprehensive experience in backend development and emerging full-stack proficiency. Formally educated with a Bachelor of Computer Science from UCSY, demonstrating strong core foundations in systems architecture, data structures, and clean coding practices. Possesses robust technical expertise in building scalable web applications using Node.js, Express, TypeScript, PHP (Laravel), and C# (ASP.NET). Adept at transforming complex business requirements into high-performance server-side systems, optimizing databases, and collaborating effectively in cross-functional teams. Committed to continuous professional development, currently expanding advanced technical and professional communication competencies to deliver immediate high-impact solutions.
+        </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-category"><strong>Languages</strong><span>TypeScript, JavaScript (ES6+), PHP, C#, SQL, HTML5, CSS3</span></div>
+            <div class="skill-category"><strong>Backend Frameworks</strong><span>Node.js, Express.js, PHP (Laravel), C# (ASP.NET Core)</span></div>
+            <div class="skill-category"><strong>Frontend Core</strong><span>React, React Native (Actively Advancing)</span></div>
+            <div class="skill-category"><strong>Databases & Tools</strong><span>MySQL, MongoDB, REST APIs, GraphQL, Git, GitHub, Postman</span></div>
+            <div class="skill-category"><strong>Methodologies</strong><span>MVC Architecture, Object-Oriented Programming (OOP), Unit Testing, Agile/Scrum</span></div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+        <h3>Professional Experience</h3>
+        
+        <div class="item">
+            <div class="item-header"><div class="item-title">Full Stack / Backend Web Developer</div><div class="item-date">Nov 2024 – Present</div></div>
+            <div class="item-sub"><div>Digital Insets Company</div><div>Yangon, Myanmar</div></div>
+            <ul>
+                <li>Architect, develop, and maintain secure, modular, and performant backend services utilizing Node.js, Express.js, TypeScript, and PHP (Laravel).</li>
+                <li>Design and optimize relational and non-relational database structures (MySQL and MongoDB), ensuring efficient data storage, seamless retrieval, and optimal query execution speeds.</li>
+                <li>Build, document, and integrate robust RESTful APIs and GraphQL services to link user-facing front-end components seamlessly with server-side logic.</li>
+                <li>Implement defensive coding practices, rigorous input validations, and unit tests to ensure high codebase reliability and minimize production-level defects.</li>
+                <li>Collaborate closely with product owners and frontend engineers to translate complex business logic into scalable technical features, maintaining strict adherence to project timelines.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header"><div class="item-title">Backend Web Developer</div><div class="item-date">March – June 2024</div></div>
+            <div class="item-sub"><div>Ophire Company</div><div>Yangon, Myanmar</div></div>
+            <ul>
+                <li>Developed corporate web solutions and scalable enterprise features utilizing the PHP Laravel framework, strictly complying with the MVC architecture design pattern.</li>
+                <li>Design and implemented custom REST APIs, facilitating efficient, asynchronous communication between third-party systems and internal applications.</li>
+                <li>Optimized existing legacy database queries, significantly improving server response times and accelerating frontend application rendering.</li>
+                <li>Utilized Git version control systems to manage branches, conduct systematic code reviews, and maintain clean repository history within an Agile development workflow.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header"><div class="item-title">Backend Web Developer</div><div class="item-date">Dec 2022 – Jul 2023</div></div>
+            <div class="item-sub"><div>Axletech Company</div><div>Yangon, Myanmar</div></div>
+            <ul>
+                <li>Engineered clean, maintainable server-side logic and core application modules using PHP Laravel.</li>
+                <li>Collaborated within a cross-functional squad of engineers and UI/UX designers to deliver custom features, improving overall application usability and user engagement.</li>
+                <li>Successfully integrated diverse payment gateways and security authentications into web platforms, guaranteeing secure and compliant financial transactions.</li>
+                <li>Troubleshot, debugged, and resolved critical production-level bugs, enhancing software operational stability and data integrity.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header"><div class="item-title">Backend Web Developer (Internship)</div><div class="item-date">4 Months Internship</div></div>
+            <div class="item-sub"><div>IrraHub</div><div>Yangon, Myanmar</div></div>
+            <ul>
+                <li>Acquired practical enterprise-level software engineering experience focusing on C# and ASP.NET Core backend frameworks.</li>
+                <li>Participated in building prototypes, internal tooling, and basic database management scripts under the mentorship of senior technical architects.</li>
+                <li>Gained hands-on experience in writing clean, well-documented code, participating in standard code reviews, and understanding complete SDLC paradigms.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <h3>Education</h3>
+        <div class="item">
+            <div class="item-header"><div class="item-title">Bachelor of Computer Science (B.C.Sc.)</div><div class="item-date">2013 – 2019</div></div>
+            <div class="item-sub"><div>University of Computer Studies, Yangon (UCSY)</div><div>Yangon, Myanmar</div></div>
+        </div>
+        <div class="item">
+            <div class="item-header"><div class="item-title">Diploma in English for Communication Skills</div><div class="item-date">Ongoing</div></div>
+            <div class="item-sub"><div>Yangon University of Foreign Languages (YUFL)</div><div>Status: Completed 3/6 Levels</div></div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section>
+        <h3>Certifications</h3>
+        <ul>
+            <li>Full Stack Developer Course – Code Lab Professional IT Training Center</li>
+            <li>Professional Web Developer Course – Fairway Technology</li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
